@@ -51,18 +51,18 @@ with st.form('user_input'):
     )
     # 提交按钮
     submitted = st.form_submit_button('提交: 进行产气含量预测')
-    #if submitted:
-        #st.write("### 用户输入的特征数据：{}".format([A, FC, V, C, H, O, ER, T, SB]))
+    if submitted:
+        st.write("### 用户输入的特征数据：{}".format([A, FC, V, C, H, O, ER, T, SB]))
 
 
         # 将所有特征合并起来
-    temp_feature = [(A, FC, V, C, H, O, ER, T, SB)]
-    data_frame = DataFrame(temp_feature,index=None,columns = ['A', 'FC', 'V', 'C', 'H', 'O', 'ER', 'T', 'SB'])
+        temp_feature = [(A, FC, V, C, H, O, ER, T, SB)]
+        data_frame = DataFrame(temp_feature,index=None,columns = ['A', 'FC', 'V', 'C', 'H', 'O', 'ER', 'T', 'SB'])
         # 模型预测
-    new_prediction = model.predict(data_frame)
+        new_prediction = model.predict(data_frame)
 
         # 预测的企鹅类别
         #predict_species = label_names[new_prediction][0]
 
         # 根据模型的特征重要性输出，绘制特征：bill length, bill depth, flipper length 的直方图
-    st.subheader("预测的组分含量是：{}  %".format(new_prediction))
+        st.subheader("预测的组分含量是：{}  %".format(new_prediction))
