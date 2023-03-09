@@ -7,7 +7,6 @@ from pandas import DataFrame
 #from sklearn.model_selection import train_test_split
 #from sklearn.metrics import accuracy_score
 #from sklearn.ensemble import RandomForestClassifier
-#from xgboost import XGBRegressor
 #from sklearn.metrics import r2_score
 #from sklearn.inspection import partial_dependence
 #from sklearn.inspection import plot_partial_dependence
