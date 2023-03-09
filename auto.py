@@ -1,18 +1,18 @@
 import streamlit as st
 import pickle
 import pandas as pd
-import matplotlib.pyplot as plt
-import seaborn as sns
+#import matplotlib.pyplot as plt
+#import seaborn as sns
 from pandas import DataFrame
-from sklearn.model_selection import train_test_split
-from sklearn.metrics import accuracy_score
-from sklearn.ensemble import RandomForestClassifier
-from xgboost import XGBRegressor
-from sklearn.metrics import r2_score
-from sklearn.inspection import partial_dependence
+#from sklearn.model_selection import train_test_split
+#from sklearn.metrics import accuracy_score
+#from sklearn.ensemble import RandomForestClassifier
+#from xgboost import XGBRegressor
+#from sklearn.metrics import r2_score
+#from sklearn.inspection import partial_dependence
 #from sklearn.inspection import plot_partial_dependence
-from sklearn.model_selection import StratifiedKFold
-from mpl_toolkits.mplot3d import Axes3D
+#from sklearn.model_selection import StratifiedKFold
+#from mpl_toolkits.mplot3d import Axes3D
 from sklearn.preprocessing import MinMaxScaler
 #import shap
 import pickle
