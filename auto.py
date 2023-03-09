@@ -52,7 +52,7 @@ with st.form('user_input'):
     # 提交按钮
     submitted = st.form_submit_button('提交: 进行产气含量预测')
     if submitted:
-        st.write("### 用户输入的特征数据：{}".format([A, FC, V, C, H, O, ER, T, SB]))
+        st.write("用户输入的特征数据：{}".format([A, FC, V, C, H, O, ER, T, SB]))
 
 
         # 将所有特征合并起来
@@ -65,4 +65,4 @@ with st.form('user_input'):
         #predict_species = label_names[new_prediction][0]
 
         # 根据模型的特征重要性输出，绘制特征：bill length, bill depth, flipper length 的直方图
-        st.subheader("预测的组分含量是：{}  %".format(new_prediction))
+        st.subheader("预测的氢气组分含量是：{}  %".format(new_prediction))
