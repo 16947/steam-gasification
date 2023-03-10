@@ -19,32 +19,32 @@ st.sidebar.write(f'The current date time is {d} {t}')
 with st.form('user_input'):
     # ash
     A = st.number_input(
-        label = "灰分含量(A)",value=5,step=1,
+        label = "灰分含量(A)",value=5.00,step=1.00,
         min_value = 0.00,max_value=50.00)
     # ② FC
     FC= st.number_input(
-        label = "固定碳含量 (FC) ",value=25,step=1,
+        label = "固定碳含量 (FC) ",value=25.00,step=1.00,
         min_value = 0.00,max_value=30.00)
     # ③VM
     V= st.number_input(
-        label = "挥发分含量 (V) ",value=70,step=1,
+        label = "挥发分含量 (V) ",value=70.00,step=1.00,
         min_value = 45.00,max_value=90.00)
     # ③C
     C = st.number_input(
-        label = "碳元素含量 (C) ",key=1,value=55,step=1,
+        label = "碳元素含量 (C) ",key=1,value=55.00,step=1.00,
         min_value = 25.00,max_value=60.00)
     # ③C
     H= st.number_input(
-        label = "氢元素含量 (H) ",value=5,step=1,
+        label = "氢元素含量 (H) ",value=5.00,step=1.00,
         min_value =0.00,max_value=10.00)
     # ② FC
     O= st.number_input(
-        label = "氧元素含量 (O) ",value=30,step=1,
+        label = "氧元素含量 (O) ",value=30.00,step=1.00,
         min_value = 15.00,max_value=50.00)
     # ③C
     ER = st.number_input(
         label = "氧气当量比 (ER) ",step=0.01,
-        min_value = 0.00,max_value=0.5)
+        min_value = 0.00,max_value=0.50)
     # ⑤ T
     T = st.number_input(
         label = "反应温度(T)",value=800,step=10,
@@ -52,7 +52,7 @@ with st.form('user_input'):
     )
     # ⑥SB
     SB= st.number_input(
-        label = "生物质与水蒸气质量比(S/B) ",value=1,step=0.1,
+        label = "生物质与水蒸气质量比(S/B) ",value=1.00,step=0.10,
         min_value = 0.00,max_value=5.00
     )
     # 提交按钮
