@@ -18,7 +18,7 @@ st.sidebar.write(f'The current date time is {d} {t}')
 st.title("生物质蒸汽气化气体产物预测")
 st.header("")
 aim = st.radio(
-    "您的预测目标是：",
+    "您的预测目标是：👇",
     ('产物浓度', '气化效率', '碳转化率'))
 
 if aim == '产物浓度':
@@ -85,4 +85,4 @@ with st.form('user_input'):
         #predict_species = label_names[new_prediction][0]
 
         # 根据模型的特征重要性输出，绘制特征：bill length, bill depth, flipper length 的直方图
-        st.subheader("预测的氢气组分含量是：{}  %".format(new_prediction))
+        st.subheader("预测的氢气组分含量是：:blue[{}]  %".format(new_prediction))
