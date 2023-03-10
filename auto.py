@@ -8,13 +8,27 @@ import datetime
 st.session_state.date_time=datetime.datetime.now() + datetime.timedelta(hours=8)
 
 st.set_page_config(page_title="生物质蒸汽气化气体产物预测",layout="wide",initial_sidebar_state="auto")
-st.title("生物质蒸汽气化气体产物预测")
-model = pickle.load(open("H21.dat","rb"))
-
 d=st.sidebar.date_input('Date',st.session_state.date_time.date())
 t=st.sidebar.time_input('Time',st.session_state.date_time.time())
 t=f'{t}'.split('.')[0]
 st.sidebar.write(f'The current date time is {d} {t}')
+
+
+
+st.title("生物质蒸汽气化气体产物预测")
+st.header("")
+aim = st.radio(
+    "您的预测目标是：",
+    ('产物浓度', '气化效率', '碳转化率'))
+
+if aim == '产物浓度':
+    model = pickle.load(open("H21.dat","rb"))
+
+elif aim == '气化效率':
+        st.write("You didn\'t select comedy.")
+else:
+        st.write("You didn\'t select comedy.")
+
 
 with st.form('user_input'):
     # ash
