@@ -85,4 +85,4 @@ with st.form('user_input'):
         #predict_species = label_names[new_prediction][0]
 
         # 根据模型的特征重要性输出，绘制特征：bill length, bill depth, flipper length 的直方图
-        st.subheader("预测的氢气组分含量是：:blue[{}]  %".format(new_prediction))
+        st.subheader("预测的氢气组分含量是：:red[{}]  %".format(new_prediction))
