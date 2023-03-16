@@ -132,7 +132,7 @@ data_predict1=([4.453156,17.826622,76.977467,48.354889,5.789244,40.194178,a1,b2,
       [4.453156,17.826622,76.977467,48.354889,5.789244,40.194178,a3,b1,c2])
 df_predict1=pd.DataFrame(data,columns= ['A', 'FC', 'V', 'C', 'H', 'O', 'ER', 'T', 'SB'])
 new_prediction1 = model.predict(df_predict1)
-df_predict11=(([d1,d2,d3],new_prediction1)
+df_predict11=([d1,d2,d3],new_prediction1)
 #submitted1 = st.form_submit_button('提交: 进行产气含量预测')
 #if submitted1:
               #st.write("用户输入的特征数据：{}".format([d1,d2,d3]))
