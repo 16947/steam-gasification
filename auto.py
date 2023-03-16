@@ -134,6 +134,6 @@ df_predict1=pd.DataFrame(data,columns= ['A', 'FC', 'V', 'C', 'H', 'O', 'ER', 'T'
 new_prediction1 = model.predict(df_predict1)
 df_predict11=(([d1,d2,d3],new_prediction1)
 submitted1 = st.form_submit_button('提交: 进行产气含量预测')
-if submitted1:
-              st.write("用户输入的特征数据：{}".format([d1,d2,d3]))
-              st.line_chart(df_predict11)   
+#if submitted1:
+              #st.write("用户输入的特征数据：{}".format([d1,d2,d3]))
+              #st.line_chart(df_predict11)   
