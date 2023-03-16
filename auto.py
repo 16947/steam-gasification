@@ -8,6 +8,8 @@ import datetime
 st.session_state.date_time=datetime.datetime.now() + datetime.timedelta(hours=8)
 
 st.set_page_config(page_title="生物质蒸汽气化气体产物预测",layout="wide",initial_sidebar_state="auto")
+st.radio("请选择功能：👇",
+    ('工况预测', '影响规律预测'))
 d=st.sidebar.date_input('Date',st.session_state.date_time.date())
 t=st.sidebar.time_input('Time',st.session_state.date_time.time())
 t=f'{t}'.split('.')[0]
@@ -86,3 +88,52 @@ with st.form('user_input'):
 
         # 根据模型的特征重要性输出，绘制特征：bill length, bill depth, flipper length 的直方图
         st.subheader("预测的氢气组分含量是：:red[{}]  %".format(new_prediction))
+
+        
+st.title("生物质蒸汽气化关键因素影响规律预测")
+st.header("")
+aim1 = st.radio(
+    "您的预测目标是：👇",
+    ('反应温度', '氧气当量比', '水蒸气与生物质质量比'))
+aa=st.number_input(
+        label = "工况1",step=1.00,
+        min_value =0.00,max_value=1000.00)
+ab=st.number_input(
+        label = "工况2",step=1.00,
+        min_value =0.00,max_value=1000.00)
+ac=st.number_input(
+        label = "工况3 ",tep=1.00,
+        min_value =0.00,max_value=1000.00)
+option2='NONE'
+if option2 =='NONE':
+    if option1 =='T':
+        a1,a2,a3=0.15,0.15,0.15
+        c1,c2,c3=1,1,1
+        b2=aa
+        b3=ab
+        b1=ac
+        d1,d2,d3=b2,b3,b1
+    if option1 =='ER':
+        b1,b2,b3=800,800,800
+        c1,c2,c3=1,1,1
+        a1=aa
+        a2=ab
+        a3=ac
+        d1,d2,d3=a1,a2,a3
+    if option1 =='SB':
+        b1,b2,b3=800,800,800
+        a1,a2,a3=0.15,0.15,0.15
+        c3=aa
+        c1=ab
+        c2=ac
+        d1,d2,d3=c3,c1,c2
+data_predict1=([4.453156,17.826622,76.977467,48.354889,5.789244,40.194178,a1,b2,c3],
+      [4.453156,17.826622,76.977467,48.354889,5.789244,40.194178,a2,b3,c1],
+      [4.453156,17.826622,76.977467,48.354889,5.789244,40.194178,a3,b1,c2])
+df_predict1=pd.DataFrame(data,columns= ['A', 'FC', 'V', 'C', 'H', 'O', 'ER', 'T', 'SB'])
+new_prediction1 = model.predict(df_predict1)
+df_predict11=(([d1,d2,d3],new_prediction1)
+submitted1 = st.form_submit_button('提交: 进行产气含量预测')
+if submitted1:
+    st.write("用户输入的特征数据：{}".format([d1,d2,d3]))
+    st.line_chart(df_predict11)   
