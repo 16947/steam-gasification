@@ -105,21 +105,21 @@ ac=st.number_input(
         label = "工况3 ")
 option2='NONE'
 if option2 =='NONE':
-    if option1 =='T':
+    if option1 =='反应温度':
         a1,a2,a3=0.15,0.15,0.15
         c1,c2,c3=1,1,1
         b2=aa
         b3=ab
         b1=ac
         d1,d2,d3=b2,b3,b1
-    if option1 =='ER':
+    if option1 =='氧气当量比':
         b1,b2,b3=800,800,800
         c1,c2,c3=1,1,1
         a1=aa
         a2=ab
         a3=ac
         d1,d2,d3=a1,a2,a3
-    if option1 =='SB':
+    if option1 =='水蒸气与生物质质量比':
         b1,b2,b3=800,800,800
         a1,a2,a3=0.15,0.15,0.15
         c3=aa
