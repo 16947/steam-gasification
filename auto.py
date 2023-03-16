@@ -102,7 +102,7 @@ ab=st.number_input(
         label = "工况2",step=1.00,
         min_value =0.00,max_value=1000.00)
 ac=st.number_input(
-        label = "工况3 ",tep=1.00,
+        label = "工况3 ",key=2,tep=1.00,
         min_value =0.00,max_value=1000.00)
 option2='NONE'
 if option2 =='NONE':
