@@ -8,7 +8,7 @@ import datetime
 st.session_state.date_time=datetime.datetime.now() + datetime.timedelta(hours=8)
 
 st.set_page_config(page_title="生物质蒸汽气化气体产物预测",layout="wide",initial_sidebar_state="auto")
-st.radio("请选择功能：👇",
+st.sidebar.radio("请选择功能：👇",
     ('工况预测', '影响规律预测'))
 d=st.sidebar.date_input('Date',st.session_state.date_time.date())
 t=st.sidebar.time_input('Time',st.session_state.date_time.time())
