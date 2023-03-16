@@ -134,8 +134,8 @@ new_prediction1 = model.predict(df_predict1)
 dataprediction = {'Name':[d1,d2,d3],'Age':new_prediction1}
 dff = pd.DataFrame(dataprediction , index=['point1','point2','point3']) 
 #df_predict11=pd.DataFrame{([d1,d2,d3],new_prediction1),}
-submitted1 = st.form_submit_button('提交: 进行规律预测')
-if submitted1:
-    st.write("用户输入的特征数据：{}".format([d1,d2,d3]))
-    st.line_chart(dff)        
+#submitted1 = st.form_submit_button('提交: 进行规律预测')
+#if submitted1:
+st.write("用户输入的特征数据：{}".format([d1,d2,d3]))
+st.line_chart(dff)        
 
